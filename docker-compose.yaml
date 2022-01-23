@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  pythonoop:
+    build:
+      context: ./
+      dockerfile: python.Dockerfile
+    container_name: 'pyOOP'
+    volumes:
+      - ./:/app
+
+  javaoop:
+    build:
+      context: ./javaoop
+      dockerfile: java.Dockerfile
+    container_name: 'javaOOP'
+    volumes:
+      - ./javaoop:/app
